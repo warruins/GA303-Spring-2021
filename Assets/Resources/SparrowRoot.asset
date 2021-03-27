@@ -17,6 +17,6 @@ MonoBehaviour:
   profession: 0
   itemType: 1
   itemDescription: Smells like fish...
-  itemId: 9265
+  itemId: Craftable-Sparrow-Root-9f4d19ca-d7bc-472e-af75-398fd01d6db1
   isStackable: 1
   stackableQty: 20

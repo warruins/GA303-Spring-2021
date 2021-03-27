@@ -17,6 +17,6 @@ MonoBehaviour:
   profession: 0
   itemType: 1
   itemDescription: Gives you nubby ass wings
-  itemId: 7876
+  itemId: Craftable-Lesser-Health-Potion-75ab7ed4-1ed9-47e7-a9d1-d2a3c73e4d3c
   isStackable: 1
   stackableQty: 20

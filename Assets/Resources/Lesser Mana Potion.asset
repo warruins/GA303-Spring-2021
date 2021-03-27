@@ -17,6 +17,6 @@ MonoBehaviour:
   profession: 0
   itemType: 1
   itemDescription: ares SMRT!
-  itemId: 6739
+  itemId: Craftable-Lesser-Mana-Potion-23ea3bbe-4fb5-49f5-835d-4edc2393c4cb
   isStackable: 1
   stackableQty: 20

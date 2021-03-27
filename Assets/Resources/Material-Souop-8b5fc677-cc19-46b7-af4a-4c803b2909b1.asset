@@ -10,22 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6da0a3fbadd1bc647b066aec312f79db, type: 3}
-  m_Name: 8671
+  m_Name: Material-Souop-8b5fc677-cc19-46b7-af4a-4c803b2909b1
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Souop
   itemIcon: {fileID: 0}
-  profession: 0
   itemType: 0
-  itemDescription: Its huge.
-  itemId: 8671
-  questTitle: Big Quest
-  questIcon: {fileID: 21300000, guid: 75b57f38e6b8eb94781ffc0d5b8229af, type: 3}
-  questObjective: 1
+  itemDescription: "me\t"
+  questObjective: 3
   invQuantity: 0
   questTimed: 0
   questTimer: 0
   questActive: 0
   questComplete: 0
-  rewardAmount: 100
-  rewardImage: {fileID: 21300000, guid: cf34a36ddb888cb4385f0f2a2b2884ab, type: 3}
+  rewardAmount: 14
+  rewardImage: {fileID: 0}
   rewardType: 0

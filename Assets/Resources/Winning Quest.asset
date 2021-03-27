@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da0a3fbadd1bc647b066aec312f79db, type: 3}
   m_Name: Winning Quest
   m_EditorClassIdentifier: 
+  itemId: Material--57fc54ed-dde1-471d-bc60-3807a3ac069a
   itemName: 
-  itemIcon: {fileID: 0}
-  profession: 0
   itemType: 0
   itemDescription: 
-  itemId: 8967
+  itemIcon: {fileID: 0}
   questObjective: 0
   invQuantity: 0
   questTimed: 0
@@ -25,5 +24,5 @@ MonoBehaviour:
   questActive: 0
   questComplete: 0
   rewardAmount: 0
-  rewardImg: {fileID: 0}
+  rewardImage: {fileID: 0}
   rewardType: 0

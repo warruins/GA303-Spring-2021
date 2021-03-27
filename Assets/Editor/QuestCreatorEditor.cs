@@ -1,4 +1,5 @@
 ﻿using System;
+using Scriptables;
 using UnityEditor;
 using UnityEngine;
 using static  Settings.CustomGameSettings;
@@ -12,7 +13,7 @@ namespace Editor
     public class QuestCreatorEditor : EditorWindow
     {
         private const string ASSETS_PATH = QUEST_ASSETS_PATH + "/{0}.asset";
-        private const GameItemTypes GAME_ITEM_TYPE = GameItemTypes.Quest;
+        private const GameContentType CONTENT_TYPE = GameContentType.Quest;
         private QuestData quest;
 
         public float labelWidth = 150f;
@@ -47,11 +48,13 @@ namespace Editor
         void CreateQuestInstance()
         {
             quest = CreateInstance<QuestData>();
+            quest.itemType = ItemType.Quest;
         }
         
         void SaveQuest()
         {
-            var path = String.Format(ASSETS_PATH, quest.itemId);
+            quest.GenerateId();
+            var path = String.Format(ASSETS_PATH, quest.GetItemId());
             var newPath = AssetDatabase.GenerateUniqueAssetPath(path);
             AssetDatabase.CreateAsset(quest, newPath);
             AssetDatabase.SaveAssets();
@@ -103,11 +106,6 @@ namespace Editor
             GUILayout.EndHorizontal();
         
             GUILayout.Space(5);
-        
-            // GUILayout.BeginHorizontal();
-            // GUILayout.Label("Reward", GUILayout.Width(labelWidth));
-            // quest.reward = EditorGUILayout.ObjectField(quest.reward, typeof(GameItem), true) as GameItem;
-            // GUILayout.EndHorizontal();
                 
             GUILayout.BeginHorizontal();
             GUILayout.Label("Reward Type", GUILayout.Width(labelWidth));
@@ -122,7 +120,7 @@ namespace Editor
             GUILayout.EndHorizontal();
         
             GUILayout.Space(5);
-        
+            
             GUILayout.BeginHorizontal();
             GUILayout.Label("Reward Icon", GUILayout.Width(labelWidth));
             quest.rewardImage = EditorGUILayout.ObjectField(quest.rewardImage, typeof(Sprite), true) as Sprite;

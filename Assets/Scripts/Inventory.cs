@@ -10,12 +10,12 @@ public class Inventory : ScriptableObject
 {
     public List<InventorySlot> Container = new List<InventorySlot>(); //list of items currently in the inventory
     
-    public void AddItem(ItemObj _item, int _itemAmount)
+    public void AddItem(GameItem gameItem, int _itemAmount)
     {
         bool hasItem = false;
         for (int i = 0; i < Container.Count; i++)
         {
-            if (Container[i].item == _item)
+            if (Container[i].gameItem == gameItem)
             {
                 Container[i].AddItem(_itemAmount);
                 hasItem = true;
@@ -24,7 +24,7 @@ public class Inventory : ScriptableObject
         }
         if (!hasItem)
         {
-            Container.Add(new InventorySlot(_item, _itemAmount));
+            Container.Add(new InventorySlot(gameItem, _itemAmount));
         }
     }
 
@@ -43,13 +43,13 @@ public class Inventory : ScriptableObject
     [System.Serializable]
     public class InventorySlot //represents each ITEM held within the inventory
     {
-        public ItemObj item;
+        public GameItem gameItem;
         public int itemAmount;
         public int itemId;
 
-        public InventorySlot(ItemObj _item, int _itemAmount) //what is the item and how many are there?
+        public InventorySlot(GameItem gameItem, int _itemAmount) //what is the item and how many are there?
         {
-            item = _item;
+            this.gameItem = gameItem;
             itemAmount = _itemAmount;
         }
 

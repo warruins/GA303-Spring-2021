@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "new Craftable", menuName = "Item System/Database/Crafted Items")]
-public class CraftablesData : ItemObj
+public class CraftablesData : GameItem
 {
     public void Awake()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "new Material", menuName = "Item System/Database/Materials")]
-public class MaterialsData : ItemObj
+public class MaterialsData : GameItem
 {
     public void Awake()
     {

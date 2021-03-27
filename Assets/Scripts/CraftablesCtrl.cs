@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class CraftablesCtrl : MonoBehaviour
 {
-    public ItemObj item;
+    public GameItem gameItem;
 }
